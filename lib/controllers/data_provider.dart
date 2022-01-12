@@ -37,7 +37,6 @@ class DataProvider extends ChangeNotifier {
       if (data != null) {
         showSnackBar(message: 'Login Successful', context: context);
         await storage.write(key: 'token', value: data['token']);
-        // return getCustomerData(context);
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
